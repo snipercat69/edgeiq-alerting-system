@@ -1,0 +1,18 @@
+{
+  "source": "edgeiq-xss-scanner",
+  "severity": "critical",
+  "title": "Reflected XSS vulnerability detected",
+  "message": "User-supplied input in the 'q' query parameter is reflected without sanitization on /search, allowing injection of arbitrary JavaScript.",
+  "target": "https://example.com/search?q=<script>alert(1)</script>",
+  "timestamp": "2026-04-23T15:00:00Z",
+  "tags": ["xss", "CWE-79", "example.com", "web"],
+  "data": {
+    "cwe": "CWE-79",
+    "cvss_score": 7.2,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+    "affected_endpoint": "/search",
+    "parameter": "q",
+    "http_method": "GET",
+    "confidence": "high"
+  }
+}
