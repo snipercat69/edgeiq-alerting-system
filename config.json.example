@@ -1,0 +1,37 @@
+{
+  "channels": {
+    "slack": {
+      "webhook_url": "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK"
+    },
+    "telegram": {
+      "bot_token": "123456:ABCdefGhIJKlmNoPQRsTUVwxYZ",
+      "chat_id": "-1001234567890"
+    },
+    "discord": {
+      "webhook_url": "https://discord.com/api/webhooks/YOUR/DISCORD/WEBHOOK"
+    },
+    "email": {
+      "smtp_host": "smtp.gmail.com",
+      "smtp_port": 587,
+      "smtp_user": "alerts@example.com",
+      "smtp_pass": "your-app-password",
+      "from_addr": "alerts@example.com",
+      "to_addrs": ["team@example.com", "oncall@example.com"],
+      "use_tls": true
+    },
+    "webhook": {
+      "url": "https://your-endpoint.example.com/webhook",
+      "secret": "your-hmac-secret",
+      "include_raw_payload": true
+    }
+  },
+  "rate_limit_per_channel": {
+    "slack": 100,
+    "telegram": 100,
+    "discord": 100,
+    "email": 100,
+    "webhook": 100
+  },
+  "ratelimit_file": ".alerter_ratelimit.json",
+  "dedup_file": ".alerter_dedup.json"
+}
